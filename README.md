@@ -1,5 +1,5 @@
 ## Discussion Forum Rest API
-###### Spring -> Web JPA MySQL
+###### Spring -> Web, JPA, MySQL
 
 To get the code:
 -------------------
@@ -9,13 +9,13 @@ Clone the repository:
     
 To run the application:
 -------------------	
-From the command line with Maven:
+From the command line with Maven: (Make sure Maven is downloaded and added in Environment variable)
 
     $ mvn spring-boot:run
     
 Or Using Spring Tool Suite
 
-     Run As Spring Boot App
+     Run As: Spring Boot App
      
 Web Application is deployed at: http://localhost:8080
 
@@ -35,7 +35,7 @@ To Check the application:
 * ForumPost
 * Comment
 
-Postman:
+Postman (example):
 -------------------	
    http://localhost:8080/api/user/new         //POST
 
