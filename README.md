@@ -55,4 +55,30 @@ postman -> Body -> raw -> JSON(application/json)
     "userType": null,
     "status": "Active"
 } 
+  ```
+
+-------------------	
+   http://localhost:8080/api/forumPost/new         //Request method = POST
+
+postman -> Body -> raw -> JSON(application/json)
+
+```
+ {
+ "title": "This post is about the superman returns",
+ "user" : { "id" : "2"},
+ "category": "General",
+ "description": "ohh ohh ohh blah blah blah",
+ "status": "Active"
+  } 
+   ```
+-------------------	
+   http://localhost:8080/api/comment/new         //Request method = POST
+
+postman -> Body -> raw -> JSON(application/json)
+```
+{
+	"forum":{"id": "7"},
+	"message": "I like this post",
+	"user": {"id":"2"}
+}
    
