@@ -37,7 +37,7 @@ To Check the application:
 
 Postman (example):
 -------------------	
-   http://localhost:8080/api/user/new         //POST
+   http://localhost:8080/api/user/new         //Request method = POST
 
 postman -> Body -> raw -> JSON(application/json)
 
@@ -50,5 +50,5 @@ postman -> Body -> raw -> JSON(application/json)
     "password": null,
     "userType": null,
     "status": "Active"
-} ```
+} 
    
