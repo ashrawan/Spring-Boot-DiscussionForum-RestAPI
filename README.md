@@ -22,7 +22,11 @@ Web Application is deployed at: http://localhost:8080
     
 To Check the application:
 -------------------	
-   http://localhost:8080/api/user/all
+Create Database: **"forum_db"** </br>
+
+Edit **"src/main/resources/application.properties"** as per need </br>
+
+check:   http://localhost:8080/api/user/all
    
     Output: [] 
     //Everything is fine
