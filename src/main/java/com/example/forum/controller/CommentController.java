@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.forum.ResourceNotFoundException;
 import com.example.forum.dao.CommentRepository;
 import com.example.forum.model.Comment;
+import com.example.forum.model.ForumPost;
 
 @RestController
 @CrossOrigin
@@ -45,6 +46,14 @@ public class CommentController {
 	public Comment getCommentByCommentId(@PathVariable(value="id") Long commentId) {
 		return commentRepository.findById(commentId)
 				.orElseThrow(() -> new ResourceNotFoundException("Comment", "id", commentId));
+	}
+	
+	// Get all comments by post
+	@GetMapping("/comment/allComments/{id}")
+	public List<Comment> getCommentsByPostId(@PathVariable(value="id") Long forumPostId) {
+		System.out.println(forumPostId);
+		System.out.println(commentRepository.findByPostId(forumPostId));
+		return commentRepository.findByPostId(forumPostId);
 	}
 	
 	// Update a Forum Post
