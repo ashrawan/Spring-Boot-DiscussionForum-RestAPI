@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import com.example.forum.model.ForumPost;
 import com.example.forum.model.User;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class ForumController {
 
@@ -40,7 +42,8 @@ public class ForumController {
 	}
 	
 	// Get a single Forum Details
-	public ForumPost getForumPostByUserId(@PathVariable(value="id") Long forumPostId) {
+	@GetMapping("/forumPost/{id}")
+	public ForumPost getForumPostById(@PathVariable(value="id") Long forumPostId) {
 		return forumRepository.findById(forumPostId)
 				.orElseThrow(() -> new ResourceNotFoundException("ForumPost", "id", forumPostId));
 	}
