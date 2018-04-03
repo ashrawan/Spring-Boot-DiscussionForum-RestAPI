@@ -81,4 +81,6 @@ postman -> Body -> raw -> JSON(application/json)
 	"message": "I like this post",
 	"user": {"id":"2"}
 }
-   
+```
+
+![classdiagram](https://user-images.githubusercontent.com/16752777/38248782-474aff66-3769-11e8-9408-ecae674e95f9.PNG)
